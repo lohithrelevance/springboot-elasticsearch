@@ -1,0 +1,57 @@
+for Bulk:
+[
+  {
+    "id" : 1,
+    "name" : "Lenovo Thinkbook 14 Core i3 16GB",
+    "description" : "Lenovo thinkbook laptop",
+    "price" : 22000.0,
+    "category" : "Laptop"
+  },
+  {
+    "id" : 6,
+    "name" : "Macbook Air M1 8GB 256GB 2020",
+    "description" : "The latest laptop from Apple",
+    "price" : 50000.0,
+    "category" : "Laptop"
+  },
+  {
+    "id" : 3,
+    "name" : "Macbook Air M1 16GB 512GB 2020",
+    "description" : "The latest laptop from Apple",
+    "price" : 60000.0,
+    "category" : "Laptop"
+  },
+  {
+    "id" : 2,
+    "name" : "Samsung Galaxy S20 Ultra 16GB",
+    "description" : "Flagship Android phone from Samsung",
+    "price" : 10000.0,
+    "category" : "Smartphone"
+  },
+  {
+    "id" : 10,
+    "name" : "Xiaomi Mi 10T 8GB",
+    "description" : "Flagship killer smartphone",
+    "price" : 8000.0,
+    "category" : "Smartphone"
+  }
+]
+
+search query : 
+
+{
+  "query": "16gb laptop",
+  "filter": {
+    "match" : {
+      "category" : "laptop"
+    },
+    "range" : {
+      "price" : {
+        "lte" : 80000,
+        "gte" : 20000
+      }
+    }
+  },
+  "page": 0,
+  "size": 20
+}
